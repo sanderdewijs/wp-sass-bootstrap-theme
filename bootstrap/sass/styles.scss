@@ -1,0 +1,60 @@
+// customize bootstrap variables here:
+@import "variables";
+@import "bootstrap";
+
+body {
+	padding-top: 50px;
+	padding-bottom: 20px;
+}
+
+.admin-bar {
+	.navbar-fixed-top {
+		margin-top: 30px;
+	}
+}
+
+/* WP navbar-styling */
+
+.sub-menu {
+	li {
+		margin-bottom: 10px;
+		list-style: none;
+		&:last-child {
+		margin-bottom: 0; }
+		}
+	a  {
+		color: #999;
+		text-decoration: none;
+		&:hover  {
+		color: #fff; }
+	}		
+	@media (min-width:$screen-sm-min) {
+			display: none;
+			position: absolute;
+			background: #222;
+			padding: 10px 15px;
+			width: 200px;		
+
+		li:hover &.sub-menu{
+			display: block;
+		}
+
+	}	
+}
+
+.current-menu-item > a, .current-menu-parent > a {
+	background: #000;	
+}
+.current-menu-parent li a {
+	background: inherit;
+}
+.current-menu-parent .current-menu-item a {
+	color: #fff;
+	font-weight: bold;
+}
+
+/* wp-sidebar styling */
+
+.sidebar {
+	margin-top: 1.875em;
+}
